@@ -1,6 +1,6 @@
 # webcam-toggle v0.1.0
 
-This program will toggle the enabled/disabled status of whichever device's Device Path you supply at compile-time. Two clicks, and your webcam is separated from the OS, instead of having to open Device Manager and navigate through all the menus.
+This program acts as a software device killswitch for devices on Windows. It will toggle the enabled/disabled status of whichever device's Device Path you supply at compile-time. Two clicks, and your webcam (or other device) is separated from the OS, instead of having to open Device Manager and navigate through all the menus. Useful for when your webcam LED turns on out of the blue and you don't know what the hell is using it, but you want it to... *not* be doing that.
 
 ## How to Use
 
