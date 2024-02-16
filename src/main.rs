@@ -42,11 +42,11 @@ fn main() {
 
     let toggle_status: u32 = match dev_status & DN_STARTED {
         0 => {
-            println!("Device currently disabled. Enabling...");
+            println!("Device is disabled. Enabling...");
             unsafe { CM_Enable_DevNode(dev_node_handle, 0) }
         }
         8 => {
-            println!("Device currently enabled. Disabling...");
+            println!("Device is enabled. Disabling...");
             unsafe { CM_Disable_DevNode(dev_node_handle, 0) }
         }
         _ => panic!("Oh shit, unknown device status. Bailing. Sorry."),
@@ -59,10 +59,10 @@ fn main() {
     unsafe { CM_Get_DevNode_Status(&mut dev_status, &mut problem_num, dev_node_handle, 0) };
     match dev_status & DN_STARTED {
         0 => {
-            println!("Device currently disabled.");
+            println!("Device is now disabled.");
         }
         8 => {
-            println!("Device currently enabled.");
+            println!("Device is now enabled.");
         }
         _ => panic!("Oh shit, unknown device status. Bailing. Sorry."),
     };
