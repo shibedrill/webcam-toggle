@@ -1,4 +1,4 @@
 [env]
 # This is the device path of the device you'd like to manage.
 # Make sure to escape back slashes.
-DEVPATH = "USB\\VID_328F&PID_2013&MI_00\\6&39FBEEC7&0&0000"
+#DEVPATH = 
