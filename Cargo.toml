@@ -1,0 +1,17 @@
+[package]
+name = "webcam-toggle"
+version = "0.1.0"
+edition = "2021"
+description = "Simple app to enable/disable a webcam or other Windows device."
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies.winapi]
+version = "0.3.9"
+features = ["setupapi", "cfgmgr32"]
+
+[package.metadata.winres]
+manifes = "./app.manifest"
+
+[build-dependencies]
+embed-resource = "2.4.1"
