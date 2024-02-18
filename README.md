@@ -1,6 +1,6 @@
-# webcam-toggle v0.1.0
+# webcam-toggle v0.2.0
 
-This program acts as a software device killswitch for devices on Windows. It will toggle the enabled/disabled status of whichever device's Device Path you supply at compile-time. Two clicks, and your webcam (or other device) is separated from the OS, instead of having to open Device Manager and navigate through all the menus. Useful for when your webcam LED turns on out of the blue and you don't know what the hell is using it, but you want it to... *not* be doing that.
+This program acts as a software device killswitch for devices on Windows. It will toggle the enabled/disabled status of whichever device's Device Path you supply at compile-time. Two clicks, and your webcam (or other device) is separated from the OS, instead of having to open Device Manager and navigate through all the menus. Useful for turning off your webcam while it's not in use. Some processes can veto the disablement of the device, so depending on the process that's using it, you might not be able to disable it.
 
 ## How to Use
 
@@ -13,4 +13,5 @@ This program acts as a software device killswitch for devices on Windows. It wil
 
 ## Errata
 
-I don't believe the API calls I'm using properly "notify" Device Manager that the device's state has been changed. If you use this program to disable a device, and then attempt to re-enable it in Device Manager, it does not work. This can be resolved either by running the program again, or by *disabling* the device in Device Manager before attempting to re-enable it.
+- I don't believe the API calls I'm using properly "notify" Device Manager that the device's state has been changed. If you use this program to disable a device, and then attempt to re-enable it in Device Manager, it does not work. This can be resolved either by running the program again, or by *disabling* the device in Device Manager before attempting to re-enable it.
+- This program will be unable to disable a device if the disable call gets vetoed by a running process, so some processes will prevent the device from being disabled, while others will not. Future iterations might include the ability to identify and possibly even kill whichever process is using the device.
