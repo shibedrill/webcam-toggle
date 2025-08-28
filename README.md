@@ -1,17 +1,40 @@
-# webcam-toggle v0.2.0
+# This repository has been archived.
+## Further Development
+Development is not discontinued! All further development will occur at [my personal Git repository.](https://git.shibedrill.site/shibedrill)
+## Microsoft does not deserve your patronage.
 
-This program acts as a software device killswitch for devices on Windows. It will toggle the enabled/disabled status of whichever device's Device Path you supply at compile-time. Two clicks, and your webcam (or other device) is separated from the OS, instead of having to open Device Manager and navigate through all the menus. Useful for turning off your webcam while it's not in use. Some processes can veto the disablement of the device, so depending on the process that's using it, you might not be able to disable it.
+- Microsoft, its partners, its employees, its leadership, and its subsidiaries are all complicit (if not eagerly helpful and instrumental) in the shameless genocide of Palestinians, and the fascist persecution of anyone who dares defy or condemn such cruelty. It has directly provided cloud infrastructure and AI services to the Israeli Defense Force, and has cooperated with the FBI to identify individuals who have protested the current occupation of Palestine and the imminent extermination of all of its inhabitants.
+- Microsoft willingly and knowingly associates and partners with Palantir, a digital data broker that is known to cooperate with the Trump administration as part of its campaign of terror and persecution against immigrants, or anyone else deemed an enemy of the State.
+- Microsoft willingly cooperates with Twitter and its AI division, "xAI". Twitter is owned by the notorious Nazi  Elon Musk, and his AI "Grok" has engaged in claims of "white genocide", Holocaust denial, and on multiple occasions, referred to itself as "Mecha-Hitler", all at the behest of Musk.
 
-## How to Use
+As such, I am discontinuing my presence on GitHub. If you value the lives and liberties of your fellow humans- both here and abroad- I advise you do the same.
 
-1. Open Device Manager.
-2. Copy the Device Instance Path of the webcam/device you want to control. e.g., `USB\VID_328F&PID_2013&MI_00\6&39FBEEC7&0&0000`. This device must be able to be Disabled/Enabled through Device Manager.
-3. Paste that into `.cargo/config.toml`, add double quotes on either side, and add extra backslashes to escape the formatting.
-4. Compile in release mode using `cargo build --release` and place the executable on your desktop. (YOU CANNOT USE `cargo run` ON THIS PROJECT. It will fail, since the EXE requires elevated permissions.)
-5. Double-click the EXE, and click "Yes". Your device's state is now toggled!
-6. Double-click the EXE again, and click "Yes" again. The device is now in its original state.
+### What you can do to help
 
-## Errata
+- **Boycott any and all GitHub services or products.**
+	- GitHub Enterprise
+	- GitHub CoPilot
+	- GitHub repository services
+	- GitHub Sponsors
+	- Any licensed merchandise
+- **Boycott any and all Microsoft services or products.**
+	- Microsoft Office
+	- Microsoft 365
+	- Microsoft Copilot
+	- Microsoft Azure
+	- Microsoft Windows
+	- Microsoft Surface PCs
+	- Microsoft Copilot+ PCs
+- **Boycott any and all Xbox products.**
+	- Xbox consoles
+	- Xbox console accessories (such as controllers)
+	- Xbox games
+	- Xbox Live
+	- Xbox Gamepass
+	- Any licensed merchandise
+- **Boycott any and all Minecraft products.**
+	- Minecraft (game)
+	- Minecraft Bedrock credits (MineCoins)
+	- Any licensed merchandise
 
-- I don't believe the API calls I'm using properly "notify" Device Manager that the device's state has been changed. If you use this program to disable a device, and then attempt to re-enable it in Device Manager, it does not work. This can be resolved either by running the program again, or by *disabling* the device in Device Manager before attempting to re-enable it.
-- This program will be unable to disable a device if the disable call gets vetoed by a running process, so some processes will prevent the device from being disabled, while others will not. Future iterations might include the ability to identify and possibly even kill whichever process is using the device.
+This list is non exhaustive.
